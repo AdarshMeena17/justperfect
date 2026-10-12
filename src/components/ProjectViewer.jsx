@@ -41,7 +41,16 @@ export default function ProjectViewer({ item, onClose }) {
         </button>
         <div className={`viewer__media viewer__media--${item.orientation}`}>
           {hasVideo ? (
-            <video controls playsInline loop poster={item.poster || undefined} src={item.src} aria-label={item.alt} />
+            <video
+              controls
+              controlsList="nodownload"
+              playsInline
+              loop
+              poster={item.poster || undefined}
+              src={item.src}
+              aria-label={item.alt}
+              onContextMenu={(event) => event.preventDefault()}
+            />
           ) : (
             <div className="viewer__poster">
               <Poster item={item} index={media.indexOf(item)} />

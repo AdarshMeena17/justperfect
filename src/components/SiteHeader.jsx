@@ -67,7 +67,13 @@ export default function SiteHeader() {
         <ul>
           {nav.map((n) => (
             <li key={n.id}>
-              <Anchor id={n.id} onClick={() => setOpen(false)}>
+              <Anchor
+                id={n.id}
+                onClick={() => {
+                  lockScroll(false);
+                  setOpen(false);
+                }}
+              >
                 {n.label}
               </Anchor>
             </li>

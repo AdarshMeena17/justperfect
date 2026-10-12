@@ -136,7 +136,7 @@ section { position: relative; }
 .duo__panels { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-3); }
 .duo__panel--1 { margin-top: 90px; }
 .duo__art { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--ink); }
-.duo__art img { width: 100%; height: 100%; object-fit: cover; }
+.duo__art img { width: 100%; height: 100%; object-fit: cover; will-change: transform, filter; }
 .duo__proc { position: absolute; inset: 0; display: grid; place-items: center; overflow: hidden; background: radial-gradient(80% 60% at 30% 20%, #2b2b2f, var(--ink)); }
 .duo__panel--1 .duo__proc { background: var(--accent); }
 .duo__init { position: relative; z-index: 1; font-family: var(--f-display); font-size: clamp(5rem, 15vw, 14rem); line-height: 1; color: transparent; -webkit-text-stroke: 2px var(--accent); }
@@ -144,6 +144,7 @@ section { position: relative; }
 .duo__stripes { position: absolute; inset: -50%; background: repeating-linear-gradient(115deg, transparent 0 28px, rgba(239, 233, 223, 0.07) 28px 30px); animation: slide 18s linear infinite; }
 .duo__panel--1 .duo__stripes { background: repeating-linear-gradient(115deg, transparent 0 28px, rgba(10, 10, 11, 0.14) 28px 30px); }
 @keyframes slide { to { transform: translateX(60px); } }
+.duo__flash { position: absolute; z-index: 1; inset: -20% -35%; pointer-events: none; background: linear-gradient(105deg, transparent 35%, rgba(255, 74, 28, 0.9) 48%, rgba(255, 210, 170, 0.7) 51%, transparent 64%); mix-blend-mode: screen; }
 .duo__label { position: absolute; left: 12px; bottom: 12px; z-index: 2; background: var(--ink); color: var(--bone); padding: 4px 8px; }
 .duo__name { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.6rem); text-transform: uppercase; margin-top: var(--sp-2); line-height: 1.05; }
 .duo__role { color: var(--mute); margin: 4px 0 8px; }

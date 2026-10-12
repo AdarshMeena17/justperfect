@@ -19,8 +19,8 @@ export const site = {
   },
 
   founders: [
-    { id: 'harshit', name: 'Harshit Thakur', initials: 'HT', treatment: 'The Creative Eye', portrait: null },
-    { id: 'deepesh', name: 'Deepesh Solanki', initials: 'DS', treatment: 'The Frame Maker', portrait: null },
+      { id: 'harshit', name: 'Harshit Thakur', initials: 'HT', treatment: 'The Creative Eye', portrait: '/images/harshit.jpeg' },
+    { id: 'deepesh', name: 'Deepesh Solanki', initials: 'DS', treatment: 'The Frame Maker', portrait: '/images/deepesh.jpeg' },
     // portrait: '/images/harshit.jpg' -> replaces the procedural panel, no layout change needed
   ],
 };
